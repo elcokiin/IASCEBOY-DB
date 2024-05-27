@@ -10,8 +10,21 @@ public class ConnectionDB {
     private static final String USER = "adminiasceboy";
     private static final String PASSWORD = "a123";
 
+    // constructor
+    public ConnectionDB() {
+    }
+
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+
+    // close connection
+    public static void close(Connection connection) {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     
 }
