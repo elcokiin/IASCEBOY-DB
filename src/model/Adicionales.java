@@ -1,15 +1,17 @@
 package model;
+
 public class Adicionales {
     private int idAdicional;
-    TiposAdicional idTipoAdicional;
+    private TiposAdicional idTipoAdicional;
     private String descripcionAdicional;
     private float valorAdicional;
 
-    public Adicionales(){
+    public Adicionales() {
 
     }
 
-    public Adicionales(int idAdicional, TiposAdicional idTipoAdicional, String descripcionAdicional, float valorAdicional){
+    public Adicionales(int idAdicional, TiposAdicional idTipoAdicional, String descripcionAdicional,
+            float valorAdicional) {
         this.idAdicional = idAdicional;
         this.idTipoAdicional = idTipoAdicional;
         this.descripcionAdicional = descripcionAdicional;
