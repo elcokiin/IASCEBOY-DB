@@ -3,9 +3,9 @@ package model;
 public class Personas {
     private int idPersona;
     private int numeroDocumentoPersona;
-    TiposDocumento idTipoDocumento;
-    TiposCliente idTipoCliente;
-    TiposAfiliado idTipoAfiliado;
+    int idTipoDocumento;
+    int idTipoCliente;
+    int idTipoAfiliado;
     private String nombreCompletoPersona;
     private String telefonoPersona;
     private String correoElectronicoPersona;
@@ -15,8 +15,8 @@ public class Personas {
 
     }
 
-    public Personas(int idPersona, int numeroDocumentoPersona, TiposDocumento idTipoDocumento,
-            TiposCliente idTipoCliente, TiposAfiliado idTipoAfiliado, String nombreCompletoPersona,
+    public Personas(int idPersona, int numeroDocumentoPersona, int idTipoDocumento,
+            int idTipoCliente, int idTipoAfiliado, String nombreCompletoPersona,
             String telefonoPersona, String correoElectronicoPersona, String direccionPersona) {
         this.idPersona = idPersona;
         this.numeroDocumentoPersona = numeroDocumentoPersona;
@@ -45,27 +45,27 @@ public class Personas {
         this.numeroDocumentoPersona = numeroDocumentoPersona;
     }
 
-    public TiposDocumento getIdTipoDocumento() {
+    public int getIdTipoDocumento() {
         return idTipoDocumento;
     }
 
-    public void setIdTipoDocumento(TiposDocumento idTipoDocumento) {
+    public void setIdTipoDocumento(int idTipoDocumento) {
         this.idTipoDocumento = idTipoDocumento;
     }
 
-    public TiposCliente getIdTipoCliente() {
+    public int getIdTipoCliente() {
         return idTipoCliente;
     }
 
-    public void setIdTipoCliente(TiposCliente idTipoCliente) {
+    public void setIdTipoCliente(int idTipoCliente) {
         this.idTipoCliente = idTipoCliente;
     }
 
-    public TiposAfiliado getIdTipoAfiliado() {
+    public int getIdTipoAfiliado() {
         return idTipoAfiliado;
     }
 
-    public void setIdTipoAfiliado(TiposAfiliado idTipoAfiliado) {
+    public void setIdTipoAfiliado(int idTipoAfiliado) {
         this.idTipoAfiliado = idTipoAfiliado;
     }
 
