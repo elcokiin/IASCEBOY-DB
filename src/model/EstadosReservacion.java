@@ -1,73 +1,61 @@
 package model;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 public class EstadosReservacion {
-    EstadosReserva idEstadoReserva;
-    Reservas idReserva;
-    private LocalDateTime fechaHoraInicioEstadoReserva;
-    private LocalDateTime fechaHoraFinEstadoReserva;
+    int idEstadoReserva;
+    int idReserva;
+    private Timestamp fechaHoraInicioEstadoReserva;
+    private Timestamp fechaHoraFinEstadoReserva;
 
 
     public EstadosReservacion() {
 
     }
 
-    public EstadosReservacion(EstadosReserva idEstadoReserva, Reservas idReserva, LocalDateTime fechaHoraInicioEstadoReserva,
-            LocalDateTime fechaHoraFinEstadoReserva) {
+    public EstadosReservacion(int idEstadoReserva, int idReserva, Timestamp fechaHoraInicioEstadoReserva,
+            Timestamp fechaHoraFinEstadoReserva) {
         this.idEstadoReserva = idEstadoReserva;
         this.idReserva = idReserva;
         this.fechaHoraInicioEstadoReserva = fechaHoraInicioEstadoReserva;
         this.fechaHoraFinEstadoReserva = fechaHoraFinEstadoReserva;
     }
 
-    public EstadosReserva getIdEstadoReserva() {
+    public int getIdEstadoReserva() {
         return idEstadoReserva;
     }
 
-    public void setIdEstadoReserva(EstadosReserva idEstadoReserva) {
+    public void setIdEstadoReserva(int idEstadoReserva) {
         this.idEstadoReserva = idEstadoReserva;
     }
 
-    public Reservas getIdReserva() {
+    public int getIdReserva() {
         return idReserva;
     }
 
-    public void setIdReserva(Reservas idReserva) {
+    public void setIdReserva(int idReserva) {
         this.idReserva = idReserva;
     }
 
-    public LocalDateTime getFechaHoraInicioEstadoReserva() {
+    public Timestamp getFechaHoraInicioEstadoReserva() {
         return fechaHoraInicioEstadoReserva;
     }
 
-    public void setFechaHoraInicioEstadoReserva(LocalDateTime fechaHoraInicioEstadoReserva) {
+    public void setFechaHoraInicioEstadoReserva(Timestamp fechaHoraInicioEstadoReserva) {
         this.fechaHoraInicioEstadoReserva = fechaHoraInicioEstadoReserva;
     }
 
-    public LocalDateTime getFechaHoraFinEstadoReserva() {
+    public Timestamp getFechaHoraFinEstadoReserva() {
         return fechaHoraFinEstadoReserva;
     }
 
-    public void setFechaHoraFinEstadoReserva(LocalDateTime fechaHoraFinEstadoReserva) {
+    public void setFechaHoraFinEstadoReserva(Timestamp fechaHoraFinEstadoReserva) {
         this.fechaHoraFinEstadoReserva = fechaHoraFinEstadoReserva;
     }
 
-    // Métodos para convertir LocalDateTime a Timestamp y viceversa
-    public Timestamp getFechaHoraInicioEstadoReservaAsTimestamp() {
-        return Timestamp.valueOf(this.fechaHoraInicioEstadoReserva);
+    // Métodos para convertir Timestamp a Timestamp y vicevers
+    public java.sql.Timestamp getFechaHoraInicioEstadoReservaTimeStamp() {
+        return fechaHoraInicioEstadoReserva;
     }
-
-    public void setFechaHoraInicioEstadoReservaFromTimestamp(Timestamp fechaHoraInicioEstadoReserva) {
-        this.fechaHoraInicioEstadoReserva = fechaHoraInicioEstadoReserva.toLocalDateTime();
-    }
-
-    public Timestamp getFechaHoraFinEstadoReservaAsTimestamp() {
-        return Timestamp.valueOf(this.fechaHoraFinEstadoReserva);
-    }
-
-    public void setFechaHoraFinEstadoReservaFromTimestamp(Timestamp fechaHoraFinEstadoReserva) {
-        this.fechaHoraFinEstadoReserva = fechaHoraFinEstadoReserva.toLocalDateTime();
-    }
+    
 }

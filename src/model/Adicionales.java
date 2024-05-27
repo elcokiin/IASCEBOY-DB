@@ -1,7 +1,7 @@
 package model;
 public class Adicionales {
     private int idAdicional;
-    TiposAdicional idTipoAdicional;
+    private int idTipoAdicional;
     private String descripcionAdicional;
     private float valorAdicional;
 
@@ -9,7 +9,7 @@ public class Adicionales {
 
     }
 
-    public Adicionales(int idAdicional, TiposAdicional idTipoAdicional, String descripcionAdicional, float valorAdicional){
+    public Adicionales(int idAdicional, int idTipoAdicional, String descripcionAdicional, float valorAdicional){
         this.idAdicional = idAdicional;
         this.idTipoAdicional = idTipoAdicional;
         this.descripcionAdicional = descripcionAdicional;
@@ -24,11 +24,11 @@ public class Adicionales {
         this.idAdicional = idAdicional;
     }
 
-    public TiposAdicional getIdTipoAdicional() {
+    public int getIdTipoAdicional() {
         return idTipoAdicional;
     }
 
-    public void setIdTipoAdicional(TiposAdicional idTipoAdicional) {
+    public void setIdTipoAdicional(int idTipoAdicional) {
         this.idTipoAdicional = idTipoAdicional;
     }
 

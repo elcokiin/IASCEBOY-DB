@@ -2,14 +2,14 @@ package model;
 
 public class Alojamientos {
     private int idAlojamiento;
-    TiposAlojamineto idTipoAlojamiento;
+    private int idTipoAlojamiento;
     private String descripcionAlojamiento;
 
     public Alojamientos(){
 
     }
 
-    public Alojamientos(int idAlojamiento, TiposAlojamineto idTipoAlojamiento, String descripcionAlojamiento){
+    public Alojamientos(int idAlojamiento, int idTipoAlojamiento, String descripcionAlojamiento){
         this.idAlojamiento = idAlojamiento;
         this.idTipoAlojamiento = idTipoAlojamiento;
         this.descripcionAlojamiento = descripcionAlojamiento;
@@ -23,11 +23,11 @@ public class Alojamientos {
         this.idAlojamiento = idAlojamiento;
     }
 
-    public TiposAlojamineto getIdTipoAlojamiento() {
+    public int getIdTipoAlojamiento() {
         return idTipoAlojamiento;
     }
 
-    public void setIdTipoAlojamiento(TiposAlojamineto idTipoAlojamiento) {
+    public void setIdTipoAlojamiento(int idTipoAlojamiento) {
         this.idTipoAlojamiento = idTipoAlojamiento;
     }
 

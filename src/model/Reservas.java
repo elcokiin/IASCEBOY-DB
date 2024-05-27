@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 
 public class Reservas {
     private int idReserva;
-    Personas idCliente;
-    Personas idEmpleado;
+    int idCliente;
+    int idEmpleado;
     private LocalDate fechaReserva;
     private float valorTotalReserva;
     private LocalDateTime fechaIngresoReserva;
@@ -16,7 +16,7 @@ public class Reservas {
 
     }
 
-    public Reservas(int idReserva, Personas idCliente, Personas idEmpleado, LocalDate fechaReserva,
+    public Reservas(int idReserva, int idCliente, int idEmpleado, LocalDate fechaReserva,
             float valorTotalReserva, Timestamp fechaIngresoReserva, Timestamp fechaSalidaReserva) {
         this.idReserva = idReserva;
         this.idCliente = idCliente;
@@ -35,19 +35,19 @@ public class Reservas {
         this.idReserva = idReserva;
     }
 
-    public Personas getIdCliente() {
+    public int getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(Personas idCliente) {
+    public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
 
-    public Personas getIdEmpleado() {
+    public int getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(Personas idEmpleado) {
+    public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 

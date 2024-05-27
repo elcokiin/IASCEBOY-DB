@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 
 public class Pasadias {
     private int idPasadia;
-    Personas idPersona;
-    Personas idEmpleado;
+    private int idPersona;
+    private int idEmpleado;
     private LocalDateTime fechaHoraIngreso;
     private LocalDateTime fechaHoraSalida;
 
@@ -14,7 +14,7 @@ public class Pasadias {
 
     }
 
-    public Pasadias(int idPasadia, Personas idPersona, Personas idEmpleado, Timestamp fechaHoraIngreso,
+    public Pasadias(int idPasadia, int idPersona, int idEmpleado, Timestamp fechaHoraIngreso,
             Timestamp fechaHoraSalida) {
         this.idPasadia = idPasadia;
         this.idPersona = idPersona;
@@ -32,19 +32,19 @@ public class Pasadias {
         this.idPasadia = idPasadia;
     }
 
-    public Personas getIdPersona() {
+    public int getIdPersona() {
         return idPersona;
     }
 
-    public void setIdPersona(Personas idPersona) {
+    public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
     }
 
-    public Personas getIdEmpleado() {
+    public int getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(Personas idEmpleado) {
+    public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 

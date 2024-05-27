@@ -1,33 +1,33 @@
 package model;
 
 public class AdicionalesRecibos {
-    Adicionales idAdicional;
-    Recibos idRecibo;
+    private int idAdicional;
+    private int idRecibo;
     private int cantidadAdicional;
 
     public AdicionalesRecibos() {
 
     }
 
-    public AdicionalesRecibos(Adicionales idAdicional, Recibos idRecibo, int cantidadAdicional) {
+    public AdicionalesRecibos(int idAdicional, int idRecibo, int cantidadAdicional) {
         this.idAdicional = idAdicional;
         this.idRecibo = idRecibo;
         this.cantidadAdicional = cantidadAdicional;
     }
 
-    public Adicionales getIdAdicional() {
+    public int getIdAdicional() {
         return idAdicional;
     }
 
-    public void setIdAdicional(Adicionales idAdicional) {
+    public void setIdAdicional(int idAdicional) {
         this.idAdicional = idAdicional;
     }
 
-    public Recibos getIdRecibo() {
+    public int getIdRecibo() {
         return idRecibo;
     }
 
-    public void setIdRecibo(Recibos idRecibo) {
+    public void setIdRecibo(int idRecibo) {
         this.idRecibo = idRecibo;
     }
 

@@ -3,8 +3,8 @@ import java.sql.Date;
 
 public class CargosPersonas {
 
-    Cargos idCargo;
-    Personas idEmpleado;
+    private int idCargo;
+    private int idEmpleado;
     private Date fechaInicioCargo;
     private Date fechaFinCargo;
 
@@ -12,26 +12,26 @@ public class CargosPersonas {
 
     }
 
-    public CargosPersonas(Cargos idCargo, Personas idEmpleado, Date fechaInicioCargo, Date fechaFinCargo) {
+    public CargosPersonas(int idCargo, int idEmpleado, Date fechaInicioCargo, Date fechaFinCargo) {
         this.idCargo = idCargo;
         this.idEmpleado = idEmpleado;
         this.fechaInicioCargo = fechaInicioCargo;
         this.fechaFinCargo = fechaFinCargo;
     }
 
-    public Cargos getIdCargo() {
+    public int getIdCargo() {
         return idCargo;
     }
 
-    public void setIdCargo(Cargos idCargo) {
+    public void setIdCargo(int idCargo) {
         this.idCargo = idCargo;
     }
 
-    public Personas getIdEmpleado() {
+    public int getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(Personas idEmpleado) {
+    public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 

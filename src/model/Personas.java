@@ -3,9 +3,9 @@ package model;
 public class Personas {
     private int idPersona;
     private int numeroDocumentoPersona;
-    int idTipoDocumento;
-    int idTipoCliente;
-    int idTipoAfiliado;
+    private int idTipoDocumento;
+    private int idTipoCliente;
+    private int idTipoAfiliado;
     private String nombreCompletoPersona;
     private String telefonoPersona;
     private String correoElectronicoPersona;

@@ -3,9 +3,9 @@ package model;
 import java.sql.Date;
 
 public class ReservacionesAlojamiento {
-    Reservas idReserva;
-    Alojamientos idAlojamiento;
-    Temporadas idTemporada;
+    int idReserva;
+    int idAlojamiento;
+    int idTemporada;
     private Date fechaIngresoReservaAlojamiento;
     private Date fechaSalidaReservaAlojamiento;
     private float valorReservaAlojamiento;
@@ -14,7 +14,7 @@ public class ReservacionesAlojamiento {
 
     }
 
-    public ReservacionesAlojamiento(Reservas idReserva, Alojamientos idAlojamiento, Temporadas idTemporada,
+    public ReservacionesAlojamiento(int idReserva, int idAlojamiento, int idTemporada,
             Date fechaIngresoReservaAlojamiento, Date fechaSalidaReservaAlojamiento, float valorReservaAlojamiento) {
         this.idReserva = idReserva;
         this.idAlojamiento = idAlojamiento;
@@ -24,27 +24,27 @@ public class ReservacionesAlojamiento {
         this.valorReservaAlojamiento = valorReservaAlojamiento;
     }
 
-    public Reservas getIdReserva() {
+    public int getIdReserva() {
         return idReserva;
     }
 
-    public void setIdReserva(Reservas idReserva) {
+    public void setIdReserva(int idReserva) {
         this.idReserva = idReserva;
     }
 
-    public Alojamientos getIdAlojamiento() {
+    public int getIdAlojamiento() {
         return idAlojamiento;
     }
 
-    public void setIdAlojamiento(Alojamientos idAlojamiento) {
+    public void setIdAlojamiento(int idAlojamiento) {
         this.idAlojamiento = idAlojamiento;
     }
 
-    public Temporadas getIdTemporada() {
+    public int getIdTemporada() {
         return idTemporada;
     }
 
-    public void setIdTemporada(Temporadas idTemporada) {
+    public void setIdTemporada(int idTemporada) {
         this.idTemporada = idTemporada;
     }
 
