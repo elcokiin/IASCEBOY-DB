@@ -1,12 +1,9 @@
 package presenter;
 import model.*;
-import db.net.*;
 import db.*;
 
 // .jar de Oracle
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.SQLSyntaxErrorException;
@@ -18,7 +15,6 @@ import db.net.ConnectionDB;
 public class App {
     public static void main(String[] args) {
         try {
-            new ConnectionDB();
             // Establecer conexión con la base de datos
             Connection connection = ConnectionDB.getConnection();
 
