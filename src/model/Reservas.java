@@ -83,6 +83,11 @@ public class Reservas {
         this.fechaSalidaReserva = fechaSalidaReserva;
     }
 
+    // Método para convertir de LocalDate a Date
+    public java.sql.Date getFechaReservaAsDate() {
+        return java.sql.Date.valueOf(this.fechaReserva);
+    }
+
     // Métodos para convertir LocalDateTime a Timestamp y viceversa
     public Timestamp getFechaIngresoReservaAsTimestamp() {
         return Timestamp.valueOf(this.fechaIngresoReserva);

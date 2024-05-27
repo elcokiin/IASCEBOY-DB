@@ -8,22 +8,20 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.SQLSyntaxErrorException;
 import java.sql.SQLTimeoutException;
 import java.sql.SQLTransientConnectionException;
-import java.util.Arrays;
-import java.util.List;
 
 import db.net.ConnectionDB;
 
 public class Deletions {
-    public void deleteRecord(int id, String nombreTabla) throws SQLException {
-        // Lista de tablas permitidas
-        List<String> validTables = Arrays.asList("tipos_adicional", "tipos_cliente", "tipos_afiliado",
-                "tipos_documento");
 
-        if (!validTables.contains(nombreTabla)) {
-            throw new IllegalArgumentException("Tabla no válida: " + nombreTabla);
-        }
 
-        String sql = "DELETE FROM " + nombreTabla + " WHERE id = ?";
+    // contructor
+    public Deletions() {
+    }
+
+
+    public void deleteRecord(int id, String nombreTabla, String nombreId) throws SQLException {
+
+        String sql = "DELETE FROM " + nombreTabla + " WHERE " + nombreId + " = ?";
 
         try (Connection conn = ConnectionDB.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {

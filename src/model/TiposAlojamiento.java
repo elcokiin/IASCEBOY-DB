@@ -1,14 +1,14 @@
 package model;
-public class TiposAlojamineto {
+public class TiposAlojamiento {
     private int tipoAlojamiento;
     private String nombreTipoAlojamiento;
     private float valorTipoAlojamiento;
 
-    public TiposAlojamineto() {
+    public TiposAlojamiento() {
 
     }
 
-    public TiposAlojamineto(int tipoAlojamiento, String nombreTipoAlojamiento, float valorTipoAlojamiento) {
+    public TiposAlojamiento(int tipoAlojamiento, String nombreTipoAlojamiento, float valorTipoAlojamiento) {
         this.tipoAlojamiento = tipoAlojamiento;
         this.nombreTipoAlojamiento = nombreTipoAlojamiento;
         this.valorTipoAlojamiento = valorTipoAlojamiento;
