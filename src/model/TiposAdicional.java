@@ -1,23 +1,23 @@
 package model;
 public class TiposAdicional {
-    private int tipoAdicional;
+    private int idTipoAdicional;
     private String nombreTipoAdicional;
 
     public TiposAdicional(){
 
     }
 
-    public TiposAdicional(int tipoAdicional, String nombreTipoAdicional){
-        this.tipoAdicional = tipoAdicional;
+    public TiposAdicional(int idTipoAdicional, String nombreTipoAdicional){
+        this.idTipoAdicional = idTipoAdicional;
         this.nombreTipoAdicional = nombreTipoAdicional;
     }
 
     public int getTipoAdicional() {
-        return tipoAdicional;
+        return idTipoAdicional;
     }
 
     public void setTipoAdicional(int tipoAdicional) {
-        this.tipoAdicional = tipoAdicional;
+        this.idTipoAdicional = tipoAdicional;
     }
 
     public String getNombreTipoAdicional() {

@@ -1,6 +1,6 @@
 package model;
 public class TiposAlojamineto {
-    private int tipoAlojamiento;
+    private int idTipoAlojamiento;
     private String nombreTipoAlojamiento;
     private float valorTipoAlojamiento;
 
@@ -8,33 +8,36 @@ public class TiposAlojamineto {
 
     }
 
-    public TiposAlojamineto(int tipoAlojamiento, String nombreTipoAlojamiento, float valorTipoAlojamiento) {
-        this.tipoAlojamiento = tipoAlojamiento;
-        this.nombreTipoAlojamiento = nombreTipoAlojamiento;
-        this.valorTipoAlojamiento = valorTipoAlojamiento;
-    }
+	public int getIdTipoAlojamiento() {
+		return idTipoAlojamiento;
+	}
 
-    public int getTipoAlojamiento() {
-        return tipoAlojamiento;
-    }
+	public void setIdTipoAlojamiento(int idTipoAlojamiento) {
+		this.idTipoAlojamiento = idTipoAlojamiento;
+	}
 
-    public void setTipoAlojamiento(int tipoAlojamiento) {
-        this.tipoAlojamiento = tipoAlojamiento;
-    }
+	public String getNombreTipoAlojamiento() {
+		return nombreTipoAlojamiento;
+	}
 
-    public String getNombreTipoAlojamiento() {
-        return nombreTipoAlojamiento;
-    }
+	public void setNombreTipoAlojamiento(String nombreTipoAlojamiento) {
+		this.nombreTipoAlojamiento = nombreTipoAlojamiento;
+	}
 
-    public void setNombreTipoAlojamiento(String nombreTipoAlojamiento) {
-        this.nombreTipoAlojamiento = nombreTipoAlojamiento;
-    }
+	public float getValorTipoAlojamiento() {
+		return valorTipoAlojamiento;
+	}
 
-    public float getValorTipoAlojamiento() {
-        return valorTipoAlojamiento;
-    }
+	public void setValorTipoAlojamiento(float valorTipoAlojamiento) {
+		this.valorTipoAlojamiento = valorTipoAlojamiento;
+	}
 
-    public void setValorTipoAlojamiento(float valorTipoAlojamiento) {
-        this.valorTipoAlojamiento = valorTipoAlojamiento;
-    }
+	public TiposAlojamineto(int idTipoAlojamiento, String nombreTipoAlojamiento, float valorTipoAlojamiento) {
+		super();
+		this.idTipoAlojamiento = idTipoAlojamiento;
+		this.nombreTipoAlojamiento = nombreTipoAlojamiento;
+		this.valorTipoAlojamiento = valorTipoAlojamiento;
+	}
+
+  
 }

@@ -1,34 +1,31 @@
 package model;
 public class TiposDocumento{
-	private int tipoDocumento;
+	private int idTipoDocumento;
 	private String nombreTipoDocumento;
 
     public TiposDocumento(){
 
     }
-    public TiposDocumento(int tipoDocumento, String nombreTipoDocumento){
-        this.tipoDocumento = tipoDocumento;
-        this.nombreTipoDocumento = nombreTipoDocumento;
-    }
 
-    public int getTipoDocumento() {
-        return tipoDocumento;
-    }
+	public int getIdTipoDocumento() {
+		return idTipoDocumento;
+	}
 
+	public void setIdTipoDocumento(int idTipoDocumento) {
+		this.idTipoDocumento = idTipoDocumento;
+	}
 
-    public void setTipoDocumento(int tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
+	public String getNombreTipoDocumento() {
+		return nombreTipoDocumento;
+	}
 
+	public void setNombreTipoDocumento(String nombreTipoDocumento) {
+		this.nombreTipoDocumento = nombreTipoDocumento;
+	}
 
-    public String getNombreTipoDocumento() {
-        return nombreTipoDocumento;
-    }
-
-
-    public void setNombreTipoDocumento(String nombreTipoDocumento) {
-        this.nombreTipoDocumento = nombreTipoDocumento;
-    }
-
-
+	public TiposDocumento(int idTipoDocumento, String nombreTipoDocumento) {
+		super();
+		this.idTipoDocumento = idTipoDocumento;
+		this.nombreTipoDocumento = nombreTipoDocumento;
+	}
 }

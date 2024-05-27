@@ -2,27 +2,32 @@ package model;
 
 public class Cargos {
 
-    private int cargo;
+    private int idCargo;
     private String nombreCargo;
 
     public Cargos(){
 
     }
-    public Cargos(int cargo, String nombreCargo){
-        this.cargo = cargo;
-        this.nombreCargo = nombreCargo;
-    }
 
-    public int getCargo() {
-        return cargo;
-    }
-    public void setCargo(int cargo) {
-        this.cargo = cargo;
-    }
-    public String getNombreCargo() {
-        return nombreCargo;
-    }
-    public void setNombreCargo(String nombreCargo) {
-        this.nombreCargo = nombreCargo;
-    }
+	public int getIdCargo() {
+		return idCargo;
+	}
+
+	public void setIdCargo(int idCargo) {
+		this.idCargo = idCargo;
+	}
+
+	public String getNombreCargo() {
+		return nombreCargo;
+	}
+
+	public void setNombreCargo(String nombreCargo) {
+		this.nombreCargo = nombreCargo;
+	}
+
+	public Cargos(int idCargo, String nombreCargo) {
+		super();
+		this.idCargo = idCargo;
+		this.nombreCargo = nombreCargo;
+	}
 }

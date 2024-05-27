@@ -1,29 +1,32 @@
 package model;
 
 public class EstadosReserva {
-    private int estadoReserva;
+    private int idEstadoReserva;
     private String nombreEstadoReserva;
 
     public EstadosReserva(){
 
     }
-    public EstadosReserva(int estadoReserva, String nombreEstadoReserva){
-        this.estadoReserva = estadoReserva;
-        this.nombreEstadoReserva = nombreEstadoReserva;
-    }
 
-    public int getEstadoReserva() {
-        return estadoReserva;
-    }
-    public void setEstadoReserva(int estadoReserva) {
-        this.estadoReserva = estadoReserva;
-    }
-    public String getNombreEstadoReserva() {
-        return nombreEstadoReserva;
-    }
-    public void setNombreEstadoReserva(String nombreEstadoReserva) {
-        this.nombreEstadoReserva = nombreEstadoReserva;
-    }
-    
-    
+	public int getIdEstadoReserva() {
+		return idEstadoReserva;
+	}
+
+	public void setIdEstadoReserva(int idEstadoReserva) {
+		this.idEstadoReserva = idEstadoReserva;
+	}
+
+	public String getNombreEstadoReserva() {
+		return nombreEstadoReserva;
+	}
+
+	public void setNombreEstadoReserva(String nombreEstadoReserva) {
+		this.nombreEstadoReserva = nombreEstadoReserva;
+	}
+
+	public EstadosReserva(int idEstadoReserva, String nombreEstadoReserva) {
+		super();
+		this.idEstadoReserva = idEstadoReserva;
+		this.nombreEstadoReserva = nombreEstadoReserva;
+	}
 }

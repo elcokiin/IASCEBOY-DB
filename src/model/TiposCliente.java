@@ -1,34 +1,33 @@
 package model;
 public class TiposCliente{
-	private int tipoAfiliado;
-	private String nombreTipoAfiliado;
+	private int idTipoCliente;
+	private String nombreTipoCliente;
 
     public TiposCliente(){
 
     }
-    public TiposCliente(int tipoAfiliado, String nombreTipoAfiliado){
-        this.tipoAfiliado = tipoAfiliado;
-        this.nombreTipoAfiliado = nombreTipoAfiliado;
-    }
 
-    public int getTipoAfiliado() {
-        return tipoAfiliado;
-    }
+	public int getIdTipoCliente() {
+		return idTipoCliente;
+	}
 
+	public TiposCliente(int idTipoCliente, String nombreTipoCliente) {
+		super();
+		this.idTipoCliente = idTipoCliente;
+		this.nombreTipoCliente = nombreTipoCliente;
+	}
 
-    public void setTipoAfiliado(int tipoAfiliado) {
-        this.tipoAfiliado = tipoAfiliado;
-    }
+	public void setIdTipoCliente(int idTipoCliente) {
+		this.idTipoCliente = idTipoCliente;
+	}
 
+	public String getNombreTipoCliente() {
+		return nombreTipoCliente;
+	}
 
-    public String getNombreTipoAfiliado() {
-        return nombreTipoAfiliado;
-    }
-
-
-    public void setNombreTipoAfiliado(String nombreTipoAfiliado) {
-        this.nombreTipoAfiliado = nombreTipoAfiliado;
-    }
+	public void setNombreTipoCliente(String nombreTipoCliente) {
+		this.nombreTipoCliente = nombreTipoCliente;
+	}
 
 
 }
