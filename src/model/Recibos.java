@@ -1,7 +1,6 @@
 package model;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 public class Recibos {
     private int idRecibo;
@@ -9,11 +8,11 @@ public class Recibos {
     private int idPasadia;
     private int idCliente;
     private int idReserva;
-    private Integer descuentoAcompaniantes;
-    private Integer descuentoTipoCliente;
+    private int descuentoAcompaniantes;
+    private int descuentoTipoCliente;
     private float valorRecibo;
     private String descripcionRecibo;
-    private LocalDateTime fechaHoraRecibo;
+    private Timestamp fechaHoraRecibo;
 
     public Recibos() {
 
@@ -21,8 +20,8 @@ public class Recibos {
 
 
     public Recibos(int idRecibo, int idEmpleado, int idPasadia, int idCliente, int idReserva,
-            Integer descuentoAcompaniantes, Integer descuentoTipoCliente, float valorRecibo, String descripcionRecibo,
-            LocalDateTime fechaHoraRecibo) {
+            int descuentoAcompaniantes, int descuentoTipoCliente, float valorRecibo, String descripcionRecibo,
+            Timestamp fechaHoraRecibo) {
         this.idRecibo = idRecibo;
         this.idEmpleado = idEmpleado;
         this.idPasadia = idPasadia;
@@ -86,22 +85,22 @@ public class Recibos {
     }
 
 
-    public Integer getDescuentoAcompaniantes() {
+    public int getDescuentoAcompaniantes() {
         return descuentoAcompaniantes;
     }
 
 
-    public void setDescuentoAcompaniantes(Integer descuentoAcompaniantes) {
+    public void setDescuentoAcompaniantes(int descuentoAcompaniantes) {
         this.descuentoAcompaniantes = descuentoAcompaniantes;
     }
 
 
-    public Integer getDescuentoTipoCliente() {
+    public int getDescuentoTipoCliente() {
         return descuentoTipoCliente;
     }
 
 
-    public void setDescuentoTipoCliente(Integer descuentoTipoCliente) {
+    public void setDescuentoTipoCliente(int descuentoTipoCliente) {
         this.descuentoTipoCliente = descuentoTipoCliente;
     }
 
@@ -126,22 +125,12 @@ public class Recibos {
     }
 
 
-    public LocalDateTime getFechaHoraRecibo() {
+    public Timestamp getFechaHoraRecibo() {
         return fechaHoraRecibo;
     }
 
 
-    public void setFechaHoraRecibo(LocalDateTime fechaHoraRecibo) {
+    public void setFechaHoraRecibo(Timestamp fechaHoraRecibo) {
         this.fechaHoraRecibo = fechaHoraRecibo;
-    }
-
-
-    // Métodos para convertir LocalDateTime a Timestamp y viceversa
-    public Timestamp getFechaHoraReciboAsTimestamp() {
-        return Timestamp.valueOf(this.fechaHoraRecibo);
-    }
-
-    public void setFechaHoraReciboFromTimestamp(Timestamp fechaHoraRecibo) {
-        this.fechaHoraRecibo = fechaHoraRecibo.toLocalDateTime();
     }
 }

@@ -1,30 +1,29 @@
 package model;
 import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.sql.Date;
 
 public class Reservas {
     private int idReserva;
     int idCliente;
     int idEmpleado;
-    private LocalDate fechaReserva;
+    private Date fechaReserva;
     private float valorTotalReserva;
-    private LocalDateTime fechaIngresoReserva;
-    private LocalDateTime fechaSalidaReserva;
+    private Timestamp fechaIngresoReserva;
+    private Timestamp fechaSalidaReserva;
 
     public Reservas() {
 
     }
 
-    public Reservas(int idReserva, int idCliente, int idEmpleado, LocalDate fechaReserva,
+    public Reservas(int idReserva, int idCliente, int idEmpleado, Date fechaReserva,
             float valorTotalReserva, Timestamp fechaIngresoReserva, Timestamp fechaSalidaReserva) {
         this.idReserva = idReserva;
         this.idCliente = idCliente;
         this.idEmpleado = idEmpleado;
         this.fechaReserva = fechaReserva;
         this.valorTotalReserva = valorTotalReserva;
-        this.fechaIngresoReserva = fechaIngresoReserva.toLocalDateTime();
-        this.fechaSalidaReserva = fechaSalidaReserva.toLocalDateTime();
+        this.fechaIngresoReserva = fechaIngresoReserva;
+        this.fechaSalidaReserva = fechaSalidaReserva;
     }
 
     public int getIdReserva() {
@@ -51,11 +50,11 @@ public class Reservas {
         this.idEmpleado = idEmpleado;
     }
 
-    public LocalDate getFechaReserva() {
+    public Date getFechaReserva() {
         return fechaReserva;
     }
 
-    public void setFechaReserva(LocalDate fechaReserva) {
+    public void setFechaReserva(Date fechaReserva) {
         this.fechaReserva = fechaReserva;
     }
 
@@ -67,42 +66,42 @@ public class Reservas {
         this.valorTotalReserva = valorTotalReserva;
     }
 
-    public LocalDateTime getFechaIngresoReserva() {
+    public Timestamp getFechaIngresoReserva() {
         return fechaIngresoReserva;
     }
 
-    public void setFechaIngresoReserva(LocalDateTime fechaIngresoReserva) {
+    public void setFechaIngresoReserva(Timestamp fechaIngresoReserva) {
         this.fechaIngresoReserva = fechaIngresoReserva;
     }
 
-    public LocalDateTime getFechaSalidaReserva() {
+    public Timestamp getFechaSalidaReserva() {
         return fechaSalidaReserva;
     }
 
-    public void setFechaSalidaReserva(LocalDateTime fechaSalidaReserva) {
+    public void setFechaSalidaReserva(Timestamp fechaSalidaReserva) {
         this.fechaSalidaReserva = fechaSalidaReserva;
     }
 
-    // Método para convertir de LocalDate a Date
-    public java.sql.Date getFechaReservaAsDate() {
-        return java.sql.Date.valueOf(this.fechaReserva);
-    }
+    // Método para convertir de Timestamp a Date
+    // public java.sql.Date getFechaReservaAsDate() {
+    //     return java.sql.Date.valueOf(this.fechaReserva);
+    // }
 
-    // Métodos para convertir LocalDateTime a Timestamp y viceversa
-    public Timestamp getFechaIngresoReservaAsTimestamp() {
-        return Timestamp.valueOf(this.fechaIngresoReserva);
-    }
+    // Métodos para convertir Timestamp a Timestamp y viceversa
+    // public Timestamp getFechaIngresoReservaAsTimestamp() {
+    //     return Timestamp.valueOf(this.fechaIngresoReserva);
+    // }
 
-    public void setFechaIngresoReservaFromTimestamp(Timestamp fechaIngresoReserva) {
-        this.fechaIngresoReserva = fechaIngresoReserva.toLocalDateTime();
-    }
+    // public void setFechaIngresoReservaFromTimestamp(Timestamp fechaIngresoReserva) {
+    //     this.fechaIngresoReserva = fechaIngresoReserva.toTimestamp();
+    // }
 
-    public Timestamp getFechaSalidaReservaAsTimestamp() {
-        return Timestamp.valueOf(this.fechaSalidaReserva);
-    }
+    // public Timestamp getFechaSalidaReservaAsTimestamp() {
+    //     return Timestamp.valueOf(this.fechaSalidaReserva);
+    // }
 
-    public void setFechaSalidaReservaFromTimestamp(Timestamp fechaSalidaReserva) {
-        this.fechaSalidaReserva = fechaSalidaReserva.toLocalDateTime();
-    }
+    // public void setFechaSalidaReservaFromTimestamp(Timestamp fechaSalidaReserva) {
+    //     this.fechaSalidaReserva = fechaSalidaReserva.toTimestamp();
+    // }
 
 }
