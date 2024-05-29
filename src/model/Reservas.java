@@ -104,4 +104,13 @@ public class Reservas {
     //     this.fechaSalidaReserva = fechaSalidaReserva.toTimestamp();
     // }
 
+    public void showInfo() {
+        System.out.println("ID Reserva: " + idReserva);
+        System.out.println("ID Cliente: " + idCliente);
+        System.out.println("ID Empleado: " + idEmpleado);
+        System.out.println("Fecha Reserva: " + fechaReserva);
+        System.out.println("Valor Total Reserva: " + valorTotalReserva);
+        System.out.println("Fecha Ingreso Reserva: " + fechaIngresoReserva);
+        System.out.println("Fecha Salida Reserva: " + fechaSalidaReserva);
+    }
 }

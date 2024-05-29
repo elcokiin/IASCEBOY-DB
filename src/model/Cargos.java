@@ -25,4 +25,9 @@ public class Cargos {
     public void setNombreCargo(String nombreCargo) {
         this.nombreCargo = nombreCargo;
     }
+
+    public void showInfo() {
+        System.out.println("cargo: " + cargo);
+        System.out.println("nombreCargo: " + nombreCargo);
+    }
 }

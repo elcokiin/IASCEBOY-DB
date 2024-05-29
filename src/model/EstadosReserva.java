@@ -25,5 +25,9 @@ public class EstadosReserva {
         this.nombreEstadoReserva = nombreEstadoReserva;
     }
     
+    public void showInfo() {
+        System.out.println("estadoReserva: " + estadoReserva);
+        System.out.println("nombreEstadoReserva: " + nombreEstadoReserva);
+    }
     
 }

@@ -37,4 +37,10 @@ public class TiposAlojamiento {
     public void setValorTipoAlojamiento(float valorTipoAlojamiento) {
         this.valorTipoAlojamiento = valorTipoAlojamiento;
     }
+
+    public void showInfo() {
+        System.out.println("tipoAlojamiento: " + tipoAlojamiento);
+        System.out.println("nombreTipoAlojamiento: " + nombreTipoAlojamiento);
+        System.out.println("valorTipoAlojamiento: " + valorTipoAlojamiento);
+    }
 }

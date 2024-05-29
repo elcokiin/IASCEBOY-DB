@@ -61,4 +61,11 @@ public class Temporadas {
         this.fechaFinTemporada = fechaFinTemporada;
     }
 
+    public void showInfo() {
+        System.out.println("ID Temporada: " + idTemporada);
+        System.out.println("Porcentaje aplicado por temporada: " + porcentajeAplicadoPorTemporada);
+        System.out.println("Tipo de temporada: " + tipoTemporada);
+        System.out.println("Fecha de inicio de temporada: " + fechaInicioTemporada);
+        System.out.println("Fecha de fin de temporada: " + fechaFinTemporada);
+    }
 }

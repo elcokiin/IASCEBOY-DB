@@ -51,4 +51,10 @@ public class CargosPersonas {
         this.fechaFinCargo = fechaFinCargo;
     }
 
+    public void showInfo() {
+        System.out.println("idCargo: " + idCargo);
+        System.out.println("idEmpleado: " + idEmpleado);
+        System.out.println("fechaInicioCargo: " + fechaInicioCargo);
+        System.out.println("fechaFinCargo: " + fechaFinCargo);
+    }
 }

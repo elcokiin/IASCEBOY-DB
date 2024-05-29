@@ -58,4 +58,10 @@ public class EstadosReservacion {
         return fechaHoraInicioEstadoReserva;
     }
     
+    public void showInfo() {
+        System.out.println("idEstadoReserva: " + idEstadoReserva);
+        System.out.println("idReserva: " + idReserva);
+        System.out.println("fechaHoraInicioEstadoReserva: " + fechaHoraInicioEstadoReserva);
+        System.out.println("fechaHoraFinEstadoReserva: " + fechaHoraFinEstadoReserva);
+    }
 }

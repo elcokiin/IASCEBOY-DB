@@ -39,6 +39,9 @@ public class Alojamientos {
         this.descripcionAlojamiento = descripcionAlojamiento;
     }
 
-    
-    
+    public void showInfo() {
+        System.out.println("idAlojamiento: " + idAlojamiento);
+        System.out.println("idTipoAlojamiento: " + idTipoAlojamiento);
+        System.out.println("descripcionAlojamiento: " + descripcionAlojamiento);
+    }
 }
