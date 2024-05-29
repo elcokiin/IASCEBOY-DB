@@ -4,7 +4,7 @@ import java.sql.Date;
 public class Temporadas {
     private int idTemporada;
     private float porcentajeAplicadoPorTemporada;
-    private char tipoTemporada;
+    private String tipoTemporada;
     private Date fechaInicioTemporada;
     private Date fechaFinTemporada;
 
@@ -12,7 +12,7 @@ public class Temporadas {
 
     }
 
-    public Temporadas(int idTemporada, float porcentajeAplicadoPorTemporada, char tipoTemporada,
+    public Temporadas(int idTemporada, float porcentajeAplicadoPorTemporada, String tipoTemporada,
             Date fechaInicioTemporada, Date fechaFinTemporada) {
         this.idTemporada = idTemporada;
         this.porcentajeAplicadoPorTemporada = porcentajeAplicadoPorTemporada;
@@ -37,11 +37,11 @@ public class Temporadas {
         this.porcentajeAplicadoPorTemporada = porcentajeAplicadoPorTemporada;
     }
 
-    public char getTipoTemporada() {
+    public String getTipoTemporada() {
         return tipoTemporada;
     }
 
-    public void setTipoTemporada(char tipoTemporada) {
+    public void setTipoTemporada(String tipoTemporada) {
         this.tipoTemporada = tipoTemporada;
     }
 

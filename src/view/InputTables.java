@@ -80,11 +80,11 @@ public class InputTables {
         int id = view.readInt();
         System.out.println("Ingrese el porcentaje aplicado por temporada: ");
         float porcentaje = view.readFloat();
-        System.out.println("Ingrese el tipo de temporada: ");
-        char tipo = view.readString().charAt(0);
-        System.out.println("Ingrese la fecha de inicio de la temporada: ");
+        System.out.println("Ingrese el tipo de temporada BAJ(baja) o ALT(alta): ");
+        String tipo = view.readString();
+        System.out.println("Ingrese la fecha de inicio de la temporada (AAAA-MM-DD): ");
         Date fechaInicio = view.readDate();
-        System.out.println("Ingrese la fecha de fin de la temporada: ");
+        System.out.println("Ingrese la fecha de fin de la temporada (AAAA-MM-DD): ");
         Date fechaFin = view.readDate();
         return new Temporadas(id, porcentaje, tipo, fechaInicio, fechaFin);
     }

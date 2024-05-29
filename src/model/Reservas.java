@@ -82,11 +82,20 @@ public class Reservas {
         this.fechaSalidaReserva = fechaSalidaReserva;
     }
 
+    // create method setFechaIngReserva resive Date and convert Timestamp
+    public void setFechaIngReserva(Date fechaIngresoReserva) {
+        this.fechaIngresoReserva = new Timestamp(fechaIngresoReserva.getTime());
+    }
+    // setFechaFinReserva
+    public void setFechaFinReserva(Date fechaSalidaReserva) {
+        this.fechaSalidaReserva = new Timestamp(fechaSalidaReserva.getTime());
+    }
+
 
     // Métodos para convertir Timestamp a Timestamp y viceversa
-     public Timestamp getFechaIngresoReservaAsTimestamp() {
-         return Timestamp.valueOf(this.fechaIngresoReserva);
-     }
+    //  public Timestamp getFechaIngresoReservaAsTimestamp() {
+    //      return Timestamp.valueOf(this.fechaIngresoReserva);
+    //  }
 
     // public void setFechaIngresoReservaFromTimestamp(Timestamp fechaIngresoReserva) {
     //     this.fechaIngresoReserva = fechaIngresoReserva.toTimestamp();

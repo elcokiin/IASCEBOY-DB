@@ -30,7 +30,7 @@ public class TiposDocumento{
         this.nombreTipoDocumento = nombreTipoDocumento;
     }
 
-    public void mostrarDatos(){
+    public void showInfo(){
         System.out.println("Tipo de documento: "+tipoDocumento);
         System.out.println("Nombre del tipo de documento: "+nombreTipoDocumento);
     }

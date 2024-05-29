@@ -4,6 +4,10 @@ package db;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.SQLSyntaxErrorException;
+import java.sql.SQLTimeoutException;
+import java.sql.SQLTransientConnectionException;
 
 import model.*;
 
@@ -16,79 +20,170 @@ public class Updates {
     }
 
     // Actualiza tipos_adicional
-    public void updateTipoAdicional(TiposAdicional tipoAdicional) throws SQLException {
+    public void updateTipoAdicional(TiposAdicional tipoAdicional) {
         String sql = "UPDATE tipos_adicional SET nombre_tipo_adicional = ? WHERE id_tipo_adicional = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, tipoAdicional.getNombreTipoAdicional());
             statement.setInt(2, tipoAdicional.getTipoAdicional());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza tipos_cliente
-    public void updateTipoCliente(TiposCliente tipoCliente) throws SQLException {
+    public void updateTipoCliente(TiposCliente tipoCliente) {
         String sql = "UPDATE tipos_cliente SET nombre_tipo_cliente = ? WHERE id_tipo_cliente = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, tipoCliente.getNombreTipoAfiliado());
             statement.setInt(2, tipoCliente.getTipoAfiliado());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza tipos_afiliado
-    public void updateTipoAfiliado(TiposAfiliado tipoAfiliado) throws SQLException {
+    public void updateTipoAfiliado(TiposAfiliado tipoAfiliado) {
         String sql = "UPDATE tipos_afiliado SET nombre_tipo_afiliado = ? WHERE id_tipo_afiliado = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, tipoAfiliado.getNombreTipoAfiliado());
             statement.setInt(2, tipoAfiliado.getTipoAfiliado());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza tipos_documento
-    public void updateTipoDocumento(TiposDocumento tipoDocumento) throws SQLException {
+    public void updateTipoDocumento(TiposDocumento tipoDocumento) {
         String sql = "UPDATE tipos_documento SET nombre_tipo_documento = ? WHERE id_tipo_documento = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, tipoDocumento.getNombreTipoDocumento());
             statement.setInt(2, tipoDocumento.getTipoDocumento());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza tipos_alojamiento
     public void updateTipoAlojamiento(TiposAlojamiento tipoAlojamiento)
-            throws SQLException {
+            {
         String sql = "UPDATE tipos_alojamiento SET nombre_tipo_alojamiento = ?, valor_tipo_alojamiento = ? WHERE id_tipo_alojamiento = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, tipoAlojamiento.getNombreTipoAlojamiento());
             statement.setFloat(2, tipoAlojamiento.getValorTipoAlojamiento());
             statement.setInt(3, tipoAlojamiento.getTipoAlojamiento());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza estados_reserva
-    public void updateEstadoReserva(EstadosReserva estadoReserva) throws SQLException {
+    public void updateEstadoReserva(EstadosReserva estadoReserva) {
         String sql = "UPDATE estados_reserva SET nombre_estado_reserva = ? WHERE id_estado_reserva = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, estadoReserva.getNombreEstadoReserva());
             statement.setInt(2, estadoReserva.getEstadoReserva());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza cargos
-    public void updateCargo(Cargos cargo) throws SQLException {
+    public void updateCargo(Cargos cargo) {
         String sql = "UPDATE cargos SET nombre_cargo = ? WHERE id_cargo = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, cargo.getNombreCargo());
             statement.setInt(2, cargo.getCargo());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza temporadas
-    public void updateTemporada(Temporadas temporada) throws SQLException {
+    public void updateTemporada(Temporadas temporada) {
         String sql = "UPDATE temporadas SET porcentaje_aplicado_por_temporada = ?, tipo_temporada = ?, fecha_inicio_temporada = ?, fecha_fin_temporada = ? WHERE id_temporada = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setFloat(1, temporada.getPorcentajeAplicadoPorTemporada());
@@ -97,22 +192,48 @@ public class Updates {
             statement.setDate(4, temporada.getFechaFinTemporada());
             statement.setInt(5, temporada.getIdTemporada());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza alojamientos
-    public void updateAlojamiento(Alojamientos alojamiento) throws SQLException {
+    public void updateAlojamiento(Alojamientos alojamiento) {
         String sql = "UPDATE alojamientos SET id_tipo_alojamiento = ?, descripcion_alojamiento = ? WHERE id_alojamiento = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, alojamiento.getIdTipoAlojamiento());
             statement.setString(2, alojamiento.getDescripcionAlojamiento());
             statement.setInt(3, alojamiento.getIdAlojamiento());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza adicionales
-    public void updateAdicional(Adicionales adicional) throws SQLException {
+    public void updateAdicional(Adicionales adicional) {
         String sql = "UPDATE adicionales SET id_tipo_adicional = ?, descripcion_adicional = ?, valor_adicional = ? WHERE id_adicional = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, adicional.getIdTipoAdicional());
@@ -120,11 +241,24 @@ public class Updates {
             statement.setFloat(3, adicional.getValorAdicional());
             statement.setInt(4, adicional.getIdAdicional());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza personas
-    public void updatePersona(Personas person) throws SQLException {
+    public void updatePersona(Personas person) {
         String sql = "UPDATE personas SET nombre_completo_persona = ?, numero_documento_persona = ?, id_tipo_documento = ?, "
                 +
                 "id_tipo_cliente = ?, id_tipo_afiliado = ?, telefono_persona = ?, correo_electronico_persona = ?, direccion_persona = ? "
@@ -141,11 +275,24 @@ public class Updates {
             statement.setString(8, person.getDireccionPersona());
             statement.setInt(9, person.getIdPersona());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza cargos_personas
-    public void updateCargoPersona(CargosPersonas cargoPersona) throws SQLException {
+    public void updateCargoPersona(CargosPersonas cargoPersona) {
         String sql = "UPDATE cargos_personas SET fecha_inicio_cargo = ?, fecha_fin_cargo = ? WHERE id_cargo = ? AND id_empleado = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setDate(1, cargoPersona.getFechaInicioCargo());
@@ -153,11 +300,24 @@ public class Updates {
             statement.setInt(3, cargoPersona.getIdCargo());
             statement.setInt(4, cargoPersona.getIdEmpleado());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza pasadias
-    public void updatePasadia(Pasadias pasadia) throws SQLException {
+    public void updatePasadia(Pasadias pasadia) {
         String sql = "UPDATE pasadias SET id_cliente = ?, id_empleado = ?, fecha_hora_ingreso = ?, fecha_hora_salida = ? WHERE id_pasadia = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, pasadia.getIdPersona());
@@ -166,11 +326,24 @@ public class Updates {
             statement.setTimestamp(4, pasadia.getFechaHoraSalidaAsTimestamp());
             statement.setInt(5, pasadia.getIdPasadia());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza reservas
-    public void updateReserva(Reservas reserva) throws SQLException {
+    public void updateReserva(Reservas reserva) {
         String sql = "UPDATE reservas SET id_cliente = ?, id_empleado = ?, fecha_reserva = ?, valor_total_reserva = ?, fecha_ingreso_reserva = ?, fecha_salida_reserva = ? WHERE id_reserva = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, reserva.getIdCliente());
@@ -181,12 +354,25 @@ public class Updates {
             statement.setTimestamp(6, reserva.getFechaSalidaReserva());
             statement.setInt(7, reserva.getIdReserva());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza estados_reservacion
     public void updateEstadoReservacion(EstadosReservacion estadoReservacion)
-            throws SQLException {
+            {
         String sql = "UPDATE estados_reservacion SET fecha_hora_inicio_estado_reserva = ?, fecha_hora_fin_estado_reserva = ? WHERE id_estado_reserva = ? AND id_reserva = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setTimestamp(1, estadoReservacion.getFechaHoraInicioEstadoReserva());
@@ -194,11 +380,24 @@ public class Updates {
             statement.setInt(3, estadoReservacion.getIdEstadoReserva());
             statement.setInt(4, estadoReservacion.getIdReserva());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza reservaciones_alojamientos
-    public void updateReservacionAlojamiento(ReservacionesAlojamiento reservacionAlojamiento) throws SQLException {
+    public void updateReservacionAlojamiento(ReservacionesAlojamiento reservacionAlojamiento) {
         String sql = "UPDATE reservaciones_alojamientos SET id_alojamiento = ?, id_temporada = ?, fecha_ingreso_reserva_alojamiento = ?, fecha_salida_reserva_alojamiento = ?, valor_reserva_alojamiento = ? WHERE id_reserva = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, reservacionAlojamiento.getIdAlojamiento());
@@ -208,11 +407,24 @@ public class Updates {
             statement.setFloat(5, reservacionAlojamiento.getValorReservaAlojamiento());
             statement.setInt(6, reservacionAlojamiento.getIdReserva());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza recibos
-    public void updateRecibo(Recibos recibo) throws SQLException {
+    public void updateRecibo(Recibos recibo) {
         String sql = "UPDATE recibos SET id_empleado = ?, id_pasadia = ?, id_cliente = ?, id_reserva = ?, descuento_acompaniantes = ?, descuento_tipo_cliente = ?, valor_recibo = ?, descripcion_recibo = ?, fecha_hora_recibo = ? WHERE id_recibo = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, recibo.getIdEmpleado());
@@ -226,18 +438,44 @@ public class Updates {
             statement.setTimestamp(9, recibo.getFechaHoraRecibo());
             statement.setInt(10, recibo.getIdRecibo());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
     // Actualiza adicionales_recibos
     public void updateAdicionalRecibo(AdicionalesRecibos adicionalRecibo)
-            throws SQLException {
+            {
         String sql = "UPDATE adicionales_recibos SET cantidad_adicional = ? WHERE id_adicional = ? AND id_recibo = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, adicionalRecibo.getCantidadAdicional());
             statement.setInt(2, adicionalRecibo.getIdAdicional());
             statement.setInt(3, adicionalRecibo.getIdRecibo());
             statement.executeUpdate();
+        }catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 

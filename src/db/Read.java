@@ -16,9 +16,119 @@ public class Read {
         this.connection = connection;
     }
 
+    public TiposAdicional readTipoAdicional(int id) {
+        String sql = "SELECT * FROM tipos_adicional WHERE id_tipo_adicional = ?";
+        TiposAdicional tipoAdicional = null;
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                tipoAdicional = new TiposAdicional();
+                tipoAdicional.setTipoAdicional(rs.getInt("id_tipo_adicional"));
+                tipoAdicional.setNombreTipoAdicional(rs.getString("nombre_tipo_adicional"));
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        }
+        return tipoAdicional;
+    }
+
+    // Read for tipo_cliente
+    public TiposCliente readTipoCliente(int id) {
+        String sql = "SELECT * FROM tipos_cliente WHERE id_tipo_cliente = ?";
+        TiposCliente tipoCliente = null;
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                tipoCliente = new TiposCliente();
+                tipoCliente.setTipoAfiliado(rs.getInt("id_tipo_cliente"));
+                tipoCliente.setNombreTipoAfiliado(rs.getString("nombre_tipo_cliente"));
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        }
+        return tipoCliente;
+    }
+
+    // Read for tipo_afiliado
+    public TiposAfiliado readTipoAfiliado(int id) {
+        String sql = "SELECT * FROM tipos_afiliado WHERE id_tipo_afiliado = ?";
+        TiposAfiliado tipoAfiliado = null;
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                tipoAfiliado = new TiposAfiliado();
+                tipoAfiliado.setTipoAfiliado(rs.getInt("id_tipo_afiliado"));
+                tipoAfiliado.setNombreTipoAfiliado(rs.getString("nombre_tipo_afiliado"));
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        }
+        return tipoAfiliado;
+    }
+
+    // Read for tipo_documento
+    public TiposDocumento readTipoDocumento(int id) {
+        String sql = "SELECT * FROM tipos_documento WHERE id_tipo_documento = ?";
+        TiposDocumento tipoDocumento = null;
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                tipoDocumento = new TiposDocumento();
+                tipoDocumento.setTipoDocumento(rs.getInt("id_tipo_documento"));
+                tipoDocumento.setNombreTipoDocumento(rs.getString("nombre_tipo_documento"));
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        }
+        return tipoDocumento;
+    }
+
+    // Read for tipo_alojamiento
+    public TiposAlojamiento readTipoAlojamiento(int id) {
+        String sql = "SELECT * FROM tipos_alojamiento WHERE id_tipo_alojamiento = ?";
+        TiposAlojamiento tipoAlojamiento = null;
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                tipoAlojamiento = new TiposAlojamiento();
+                tipoAlojamiento.setTipoAlojamiento(rs.getInt("id_tipo_alojamiento"));
+                tipoAlojamiento.setNombreTipoAlojamiento(rs.getString("nombre_tipo_alojamiento"));
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        }
+        return tipoAlojamiento;
+    }
+
+    // Read for temporada
+    public Temporadas readTemporada(int id) {
+        String sql = "SELECT * FROM temporadas WHERE id_temporada = ?";
+        Temporadas temporada = null;
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                temporada = new Temporadas();
+                temporada.setIdTemporada(rs.getInt("id_temporada"));
+                temporada.setPorcentajeAplicadoPorTemporada(rs.getFloat("porcentaje_aplicado_por_temporada"));
+                temporada.setTipoTemporada(rs.getString("tipo_temporada"));
+                temporada.setFechaInicioTemporada(rs.getDate("fecha_inicio_temporada"));
+                temporada.setFechaFinTemporada(rs.getDate("fecha_fin_temporada"));
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        }
+        return temporada;
+    }
+
     // Read for adicional
     public Adicionales readAdicional(int id) {
-        String sql = "SELECT * FROM adicional WHERE id_adicional = ?";
+        String sql = "SELECT * FROM adicionales WHERE id_adicional = ?";
         Adicionales adicional = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -38,7 +148,7 @@ public class Read {
 
     // Read for adicional_recibo
     public AdicionalesRecibos readAdicionalRecibo(int id) {
-        String sql = "SELECT * FROM adicional_recibo WHERE id_adicional = ?";
+        String sql = "SELECT * FROM adicionales_recibos WHERE id_adicional = ?";
         AdicionalesRecibos adicionalRecibo = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -57,7 +167,7 @@ public class Read {
 
     // Read for alojamiento
     public Alojamientos readAlojamiento(int id) {
-        String sql = "SELECT * FROM alojamiento WHERE id_alojamiento = ?";
+        String sql = "SELECT * FROM alojamientos WHERE id_alojamiento = ?";
         Alojamientos alojamiento = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -76,14 +186,14 @@ public class Read {
 
     // Read for cargo
     public Cargos readCargo(int id) {
-        String sql = "SELECT * FROM cargo WHERE id_cargo = ?";
+        String sql = "SELECT * FROM cargos WHERE id_cargo = ?";
         Cargos cargo = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 cargo = new Cargos();
-                cargo.setIdCargo(rs.getInt("id_cargo"));
+                cargo.setCargo(rs.getInt("id_cargo"));
                 cargo.setNombreCargo(rs.getString("nombre_cargo"));
             }
         } catch (SQLException e) {
@@ -94,7 +204,7 @@ public class Read {
 
     // Read for cargo_persona
     public CargosPersonas readCargoPersona(int id) {
-        String sql = "SELECT * FROM cargo_persona WHERE id_cargo = ?";
+        String sql = "SELECT * FROM cargos_personas WHERE id_cargo = ?";
         CargosPersonas cargoPersona = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -114,7 +224,7 @@ public class Read {
 
     // Read for estado_reserva
     public EstadosReserva readEstadoReserva(int id) {
-        String sql = "SELECT * FROM estado_reserva WHERE id_estado_reserva = ?";
+        String sql = "SELECT * FROM estados_reserva WHERE id_estado_reserva = ?";
         EstadosReserva estadoReserva = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -132,7 +242,7 @@ public class Read {
 
     // Read for estado_reservacion
     public EstadosReservacion readEstadoReservacion(int id) {
-        String sql = "SELECT * FROM estado_reservacion WHERE id_estado_reserva = ?";
+        String sql = "SELECT * FROM estados_reservacion WHERE id_estado_reserva = ?";
         EstadosReservacion estadoReservacion = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -152,7 +262,7 @@ public class Read {
 
     // Read for pasadia
     public Pasadias readPasadia(int id) {
-        String sql = "SELECT * FROM pasadia WHERE id_pasadia = ?";
+        String sql = "SELECT * FROM pasadias WHERE id_pasadia = ?";
         Pasadias pasadia = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -173,7 +283,7 @@ public class Read {
 
     // Read for persona
     public Personas readPersona(int id) {
-        String sql = "SELECT * FROM persona WHERE id_persona = ?";
+        String sql = "SELECT * FROM personas WHERE id_persona = ?";
         Personas persona = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -198,7 +308,7 @@ public class Read {
 
     // Read for recibo
     public Recibos readRecibo(int id) {
-        String sql = "SELECT * FROM recibo WHERE id_recibo = ?";
+        String sql = "SELECT * FROM recibos WHERE id_recibo = ?";
         Recibos recibo = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -224,7 +334,7 @@ public class Read {
 
     // Read for reservacion_alojamiento
     public ReservacionesAlojamiento readReservacionAlojamiento(int id) {
-        String sql = "SELECT * FROM reservacion_alojamiento WHERE id_reservacion_alojamiento = ?";
+        String sql = "SELECT * FROM reservaciones_alojamientos WHERE id_reservacion_alojamiento = ?";
         ReservacionesAlojamiento reservacionAlojamiento = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -243,7 +353,7 @@ public class Read {
 
     // Read for reserva
     public Reservas readReserva(int id) {
-        String sql = "SELECT * FROM reserva WHERE id_reserva = ?";
+        String sql = "SELECT * FROM reservas WHERE id_reserva = ?";
         Reservas reserva = null;
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
