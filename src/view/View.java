@@ -12,6 +12,10 @@ public class View {
         sc = new Scanner(System.in);
     }
 
+    public void print(String message) {
+        System.out.println(message);
+    }
+
     public int readInt() {
         return Integer.parseInt(sc.nextLine());
     }
