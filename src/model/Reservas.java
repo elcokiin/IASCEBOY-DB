@@ -82,15 +82,11 @@ public class Reservas {
         this.fechaSalidaReserva = fechaSalidaReserva;
     }
 
-    // Método para convertir de Timestamp a Date
-    // public java.sql.Date getFechaReservaAsDate() {
-    //     return java.sql.Date.valueOf(this.fechaReserva);
-    // }
 
     // Métodos para convertir Timestamp a Timestamp y viceversa
-    // public Timestamp getFechaIngresoReservaAsTimestamp() {
-    //     return Timestamp.valueOf(this.fechaIngresoReserva);
-    // }
+     public Timestamp getFechaIngresoReservaAsTimestamp() {
+         return Timestamp.valueOf(this.fechaIngresoReserva);
+     }
 
     // public void setFechaIngresoReservaFromTimestamp(Timestamp fechaIngresoReserva) {
     //     this.fechaIngresoReserva = fechaIngresoReserva.toTimestamp();
