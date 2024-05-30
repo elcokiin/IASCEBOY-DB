@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class EstadosReservacion {
     int idEstadoReserva;
@@ -45,6 +46,11 @@ public class EstadosReservacion {
         this.fechaHoraInicioEstadoReserva = fechaHoraInicioEstadoReserva;
     }
 
+    public void setFechaHIEstadoReserva(LocalDateTime fechaHoraInicioEstadoReserva) {
+        this.fechaHoraInicioEstadoReserva = Timestamp.valueOf(fechaHoraInicioEstadoReserva);
+    }
+
+
     public Timestamp getFechaHoraFinEstadoReserva() {
         return fechaHoraFinEstadoReserva;
     }
@@ -53,9 +59,19 @@ public class EstadosReservacion {
         this.fechaHoraFinEstadoReserva = fechaHoraFinEstadoReserva;
     }
 
+    public void setFechaHFEstadoReserva(LocalDateTime fechaHoraFinEstadoReserva) {
+        this.fechaHoraFinEstadoReserva = Timestamp.valueOf(fechaHoraFinEstadoReserva);
+    }
+
     // Métodos para convertir Timestamp a Timestamp y vicevers
     public java.sql.Timestamp getFechaHoraInicioEstadoReservaTimeStamp() {
         return fechaHoraInicioEstadoReserva;
     }
     
+    public void showInfo() {
+        System.out.println("idEstadoReserva: " + idEstadoReserva);
+        System.out.println("idReserva: " + idReserva);
+        System.out.println("fechaHoraInicioEstadoReserva: " + fechaHoraInicioEstadoReserva);
+        System.out.println("fechaHoraFinEstadoReserva: " + fechaHoraFinEstadoReserva);
+    }
 }

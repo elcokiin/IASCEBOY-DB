@@ -47,4 +47,11 @@ public class Adicionales {
     public void setValorAdicional(float valorAdicional) {
         this.valorAdicional = valorAdicional;
     }
+
+    public void showInfo() {
+        System.out.println("idAdicional: " + idAdicional);
+        System.out.println("idTipoAdicional: " + idTipoAdicional);
+        System.out.println("descripcionAdicional: " + descripcionAdicional);
+        System.out.println("valorAdicional: " + valorAdicional);
+    }
 }

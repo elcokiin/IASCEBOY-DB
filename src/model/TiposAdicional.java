@@ -27,4 +27,9 @@ public class TiposAdicional {
     public void setNombreTipoAdicional(String nombreTipoAdicional) {
         this.nombreTipoAdicional = nombreTipoAdicional;
     }
+
+    public void showInfo() {
+        System.out.println("tipoAdicional: " + tipoAdicional);
+        System.out.println("nombreTipoAdicional: " + nombreTipoAdicional);
+    }
 }

@@ -30,5 +30,9 @@ public class TiposCliente{
         this.nombreTipoAfiliado = nombreTipoAfiliado;
     }
 
+    public void showInfo() {
+        System.out.println("tipoAfiliado: " + tipoAfiliado);
+        System.out.println("nombreTipoAfiliado: " + nombreTipoAfiliado);
+    }
 
 }

@@ -38,4 +38,10 @@ public class AdicionalesRecibos {
     public void setCantidadAdicional(int cantidadAdicional) {
         this.cantidadAdicional = cantidadAdicional;
     }
+
+    public void showInfo() {
+        System.out.println("idAdicional: " + idAdicional);
+        System.out.println("idRecibo: " + idRecibo);
+        System.out.println("cantidadAdicional: " + cantidadAdicional);
+    }
 }

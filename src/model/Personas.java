@@ -101,5 +101,15 @@ public class Personas {
         this.direccionPersona = direccionPersona;
     }
 
-    
+    public void showInfo() {
+        System.out.println("idPersona: " + idPersona);
+        System.out.println("numeroDocumentoPersona: " + numeroDocumentoPersona);
+        System.out.println("idTipoDocumento: " + idTipoDocumento);
+        System.out.println("idTipoCliente: " + idTipoCliente);
+        System.out.println("idTipoAfiliado: " + idTipoAfiliado);
+        System.out.println("nombreCompletoPersona: " + nombreCompletoPersona);
+        System.out.println("telefonoPersona: " + telefonoPersona);
+        System.out.println("correoElectronicoPersona: " + correoElectronicoPersona);
+        System.out.println("direccionPersona: " + direccionPersona);
+    }
 }

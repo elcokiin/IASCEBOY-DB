@@ -72,5 +72,12 @@ public class ReservacionesAlojamiento {
         this.valorReservaAlojamiento = valorReservaAlojamiento;
     }
 
-    
+    public void showInfo() {
+        System.out.println("Id Reserva: " + idReserva);
+        System.out.println("Id Alojamiento: " + idAlojamiento);
+        System.out.println("Id Temporada: " + idTemporada);
+        System.out.println("Fecha Ingreso Reserva Alojamiento: " + fechaIngresoReservaAlojamiento);
+        System.out.println("Fecha Salida Reserva Alojamiento: " + fechaSalidaReservaAlojamiento);
+        System.out.println("Valor Reserva Alojamiento: " + valorReservaAlojamiento);
+    }
 }

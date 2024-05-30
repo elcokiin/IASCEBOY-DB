@@ -133,4 +133,17 @@ public class Recibos {
     public void setFechaHoraRecibo(Timestamp fechaHoraRecibo) {
         this.fechaHoraRecibo = fechaHoraRecibo;
     }
+
+    public void showInfo() {
+        System.out.println("idRecibo: " + idRecibo);
+        System.out.println("idEmpleado: " + idEmpleado);
+        System.out.println("idPasadia: " + idPasadia);
+        System.out.println("idCliente: " + idCliente);
+        System.out.println("idReserva: " + idReserva);
+        System.out.println("descuentoAcompaniantes: " + descuentoAcompaniantes);
+        System.out.println("descuentoTipoCliente: " + descuentoTipoCliente);
+        System.out.println("valorRecibo: " + valorRecibo);
+        System.out.println("descripcionRecibo: " + descripcionRecibo);
+        System.out.println("fechaHoraRecibo: " + fechaHoraRecibo);
+    }
 }

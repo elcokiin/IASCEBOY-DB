@@ -80,4 +80,12 @@ public class Pasadias {
     public void setFechaHoraSalidaFromTimestamp(Timestamp fechaHoraSalida) {
         this.fechaHoraSalida = fechaHoraSalida != null ? fechaHoraSalida.toLocalDateTime() : null;
     }
+
+    public void showInfo() {
+        System.out.println("idPasadia: " + idPasadia);
+        System.out.println("idPersona: " + idPersona);
+        System.out.println("idEmpleado: " + idEmpleado);
+        System.out.println("fechaHoraIngreso: " + fechaHoraIngreso);
+        System.out.println("fechaHoraSalida: " + fechaHoraSalida);
+    }
 }

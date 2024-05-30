@@ -38,16 +38,19 @@ public class Insertions {
 
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -60,16 +63,19 @@ public class Insertions {
             statement.setString(2, tipoAdicional.getNombreTipoAdicional());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
     }
 
@@ -81,16 +87,19 @@ public class Insertions {
             statement.setString(2, tipoCliente.getNombreTipoAfiliado());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -105,16 +114,19 @@ public class Insertions {
             statement.setString(2, tipoAfiliado.getNombreTipoAfiliado());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -127,16 +139,19 @@ public class Insertions {
             statement.setString(2, tipoDocumento.getNombreTipoDocumento());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -150,16 +165,19 @@ public class Insertions {
             statement.setFloat(3, tipoAlojamiento.getValorTipoAlojamiento());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -172,16 +190,19 @@ public class Insertions {
             statement.setString(2, estadoReserva.getNombreEstadoReserva());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -194,16 +215,19 @@ public class Insertions {
             statement.setString(2, cargo.getNombreCargo());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -214,23 +238,24 @@ public class Insertions {
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, temporada.getIdTemporada());
             statement.setFloat(2, temporada.getPorcentajeAplicadoPorTemporada());
-            statement.setInt(3, temporada.getTipoTemporada());
+            statement.setString(3, temporada.getTipoTemporada());
             statement.setDate(4, temporada.getFechaInicioTemporada());
             statement.setDate(5, temporada.getFechaFinTemporada());
             statement.executeUpdate();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error de sintaxis en el input: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
-        }
-        
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
+        }     
     }
 
     public void alojamientos(Alojamientos alojamiento) {
@@ -242,16 +267,19 @@ public class Insertions {
             statement.setString(3, alojamiento.getDescripcionAlojamiento());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -266,16 +294,19 @@ public class Insertions {
             statement.setFloat(4, adicional.getValorAdicional());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -290,16 +321,19 @@ public class Insertions {
             statement.setDate(4, cargoPersona.getFechaFinCargo());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -315,16 +349,19 @@ public class Insertions {
             statement.setTimestamp(5, pasadia.getFechaHoraSalidaAsTimestamp());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -342,18 +379,20 @@ public class Insertions {
             statement.setTimestamp(7, reserva.getFechaSalidaReserva());
             statement.executeUpdate();
         }
-        catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
-        } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
-        } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
-        } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
-        } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
-        
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
+        } catch (SQLSyntaxErrorException e) {
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
+        } catch (SQLTimeoutException e) {
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
+        } catch (SQLTransientConnectionException e) {
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
+        }
     }
 
     public void estadosReservacion(EstadosReservacion estadoReservacion) {
@@ -366,16 +405,19 @@ public class Insertions {
             statement.setTimestamp(4, estadoReservacion.getFechaHoraFinEstadoReserva());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -392,16 +434,19 @@ public class Insertions {
             statement.setFloat(6, reservacionAlojamiento.getValorReservaAlojamiento());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -422,16 +467,19 @@ public class Insertions {
             statement.setTimestamp(10, recibo.getFechaHoraRecibo());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }
@@ -445,16 +493,19 @@ public class Insertions {
             statement.setInt(3, adicionalRecibo.getCantidadAdicional());
             statement.executeUpdate();
         }
+        catch (IllegalArgumentException e) {
+            System.out.println("Error de argumento ilegal: " + e.getMessage());
+        }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.out.println("Error de sintaxis SQL: " + e.getMessage());
+            System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.out.println("Error de tiempo de espera: " + e.getMessage());
+            System.out.println("(DB) Error de tiempo de espera: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.out.println("Error de conexión transitoria: " + e.getMessage());
+            System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de SQL: " + e.getMessage());
+            System.out.println("(DB) Error de SQL: " + e.getMessage());
         }
         
     }

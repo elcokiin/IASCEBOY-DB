@@ -82,15 +82,20 @@ public class Reservas {
         this.fechaSalidaReserva = fechaSalidaReserva;
     }
 
-    // Método para convertir de Timestamp a Date
-    // public java.sql.Date getFechaReservaAsDate() {
-    //     return java.sql.Date.valueOf(this.fechaReserva);
-    // }
+    // create method setFechaIngReserva resive Date and convert Timestamp
+    public void setFechaIngReserva(Date fechaIngresoReserva) {
+        this.fechaIngresoReserva = new Timestamp(fechaIngresoReserva.getTime());
+    }
+    // setFechaFinReserva
+    public void setFechaFinReserva(Date fechaSalidaReserva) {
+        this.fechaSalidaReserva = new Timestamp(fechaSalidaReserva.getTime());
+    }
+
 
     // Métodos para convertir Timestamp a Timestamp y viceversa
-    // public Timestamp getFechaIngresoReservaAsTimestamp() {
-    //     return Timestamp.valueOf(this.fechaIngresoReserva);
-    // }
+    //  public Timestamp getFechaIngresoReservaAsTimestamp() {
+    //      return Timestamp.valueOf(this.fechaIngresoReserva);
+    //  }
 
     // public void setFechaIngresoReservaFromTimestamp(Timestamp fechaIngresoReserva) {
     //     this.fechaIngresoReserva = fechaIngresoReserva.toTimestamp();
@@ -104,4 +109,13 @@ public class Reservas {
     //     this.fechaSalidaReserva = fechaSalidaReserva.toTimestamp();
     // }
 
+    public void showInfo() {
+        System.out.println("ID Reserva: " + idReserva);
+        System.out.println("ID Cliente: " + idCliente);
+        System.out.println("ID Empleado: " + idEmpleado);
+        System.out.println("Fecha Reserva: " + fechaReserva);
+        System.out.println("Valor Total Reserva: " + valorTotalReserva);
+        System.out.println("Fecha Ingreso Reserva: " + fechaIngresoReserva);
+        System.out.println("Fecha Salida Reserva: " + fechaSalidaReserva);
+    }
 }

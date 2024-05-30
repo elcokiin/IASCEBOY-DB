@@ -9,36 +9,32 @@ import java.sql.SQLSyntaxErrorException;
 import java.sql.SQLTimeoutException;
 import java.sql.SQLTransientConnectionException;
 
-import db.net.ConnectionDB;
-
 public class Deletions {
 
+    Connection connection;
 
     // contructor
-    public Deletions() {
+    public Deletions(Connection connection) {
+        this.connection = connection;
     }
 
-
-    public void deleteRecord(int id, String nombreTabla, String nombreId) throws SQLException {
+    public void deleteRecord(int id, String nombreTabla, String nombreId) {
 
         String sql = "DELETE FROM " + nombreTabla + " WHERE " + nombreId + " = ?";
 
-        try (Connection conn = ConnectionDB.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
-
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         } catch (SQLIntegrityConstraintViolationException e) {
-            System.err.println("Constraint violation: " + e.getMessage());
+            System.err.println("Error de Constraint: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.err.println("Syntax error in SQL query: " + e.getMessage());
+            System.err.println("Syntax error en SQL query: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.err.println("Query timeout: " + e.getMessage());
+            System.err.println("Tiempo de espera exedido: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.err.println("Temporary connection issue: " + e.getMessage());
+            System.err.println("Error de tiempo de conexion: " + e.getMessage());
         } catch (SQLException e) {
             System.err.println("SQL error: " + e.getMessage());
-            throw e; // Re-throw to indicate failure to caller
         }
     }
 
