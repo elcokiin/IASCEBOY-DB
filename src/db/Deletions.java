@@ -26,13 +26,13 @@ public class Deletions {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         } catch (SQLIntegrityConstraintViolationException e) {
-            System.err.println("Constraint violation: " + e.getMessage());
+            System.err.println("Error de Constraint: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
-            System.err.println("Syntax error in SQL query: " + e.getMessage());
+            System.err.println("Syntax error en SQL query: " + e.getMessage());
         } catch (SQLTimeoutException e) {
-            System.err.println("Query timeout: " + e.getMessage());
+            System.err.println("Tiempo de espera exedido: " + e.getMessage());
         } catch (SQLTransientConnectionException e) {
-            System.err.println("Temporary connection issue: " + e.getMessage());
+            System.err.println("Error de tiempo de conexion: " + e.getMessage());
         } catch (SQLException e) {
             System.err.println("SQL error: " + e.getMessage());
         }

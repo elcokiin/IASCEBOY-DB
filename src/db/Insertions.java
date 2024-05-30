@@ -42,7 +42,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -67,7 +67,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -91,7 +91,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -118,7 +118,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -143,7 +143,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -169,7 +169,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -194,7 +194,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -219,7 +219,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -246,7 +246,7 @@ public class Insertions {
             System.out.println("Error de sintaxis en el input: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -255,8 +255,7 @@ public class Insertions {
             System.out.println("(DB) Error de conexión transitoria: " + e.getMessage());
         } catch (SQLException e) {
             System.out.println("(DB) Error de SQL: " + e.getMessage());
-        }
-        
+        }     
     }
 
     public void alojamientos(Alojamientos alojamiento) {
@@ -272,7 +271,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -299,7 +298,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -326,7 +325,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -354,7 +353,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -384,7 +383,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -410,7 +409,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -439,7 +438,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -472,7 +471,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {
@@ -498,7 +497,7 @@ public class Insertions {
             System.out.println("Error de argumento ilegal: " + e.getMessage());
         }
         catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("(DB) Error de integridad de datos: " + e.getMessage());
+            System.out.println("(DB) Error en el constrain: " + e.getMessage());
         } catch (SQLSyntaxErrorException e) {
             System.out.println("(DB) Error de sintaxis SQL: " + e.getMessage());
         } catch (SQLTimeoutException e) {

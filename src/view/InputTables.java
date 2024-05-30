@@ -190,9 +190,9 @@ public class InputTables {
         Date fechaReserva = view.readDate();
         System.out.println("Ingrese el valor total de la reserva: ");
         float valorTotal = view.readFloat();
-        System.out.println("Ingrese la fecha y hora de ingreso de la reserva: ");
+        System.out.println("Ingrese la fecha y hora de ingreso de la reserva (yyyy-mm-dd hh:mm:ss): ");
         Timestamp fechaIngreso = view.readTimestamp();
-        System.out.println("Ingrese la fecha y hora de salida de la reserva: ");
+        System.out.println("Ingrese la fecha y hora de salida de la reserva (yyyy-mm-dd hh:mm:ss): ");
         Timestamp fechaSalida = view.readTimestamp();
         return new Reservas(id, idCliente, idEmpleado, fechaReserva, valorTotal, fechaIngreso, fechaSalida);
     }
@@ -202,9 +202,9 @@ public class InputTables {
         int idEstado = view.readInt();
         System.out.println("Ingrese el id de la reserva: ");
         int idReserva = view.readInt();
-        System.out.println("Ingrese la fecha y hora de inicio del estado de reserva: ");
+        System.out.println("Ingrese la fecha y hora de inicio del estado de reserva (yyyy-mm-dd hh:mm:ss): ");
         Timestamp fechaHoraInicio = view.readTimestamp();
-        System.out.println("Ingrese la fecha y hora de fin del estado de reserva: ");
+        System.out.println("Ingrese la fecha y hora de fin del estado de reserva (yyyy-mm-dd hh:mm:ss): ");
         Timestamp fechaHoraFin = view.readTimestamp();
         return new EstadosReservacion(idEstado, idReserva, fechaHoraInicio, fechaHoraFin);
     }
@@ -244,7 +244,7 @@ public class InputTables {
         float valor = view.readFloat();
         System.out.println("Ingrese la descripción del recibo: ");
         String descripcion = view.readString();
-        System.out.println("Ingrese la fecha y hora del recibo: ");
+        System.out.println("Ingrese la fecha y hora del recibo (yyyy-mm-dd hh:mm:ss): ");
         Timestamp fechaHora = view.readTimestamp();
         return new Recibos(id, idEmpleado, idPasadia, idCliente, idReserva, descuentoAcompaniantes, descuentoTipoCliente, valor, descripcion, fechaHora);
     }
